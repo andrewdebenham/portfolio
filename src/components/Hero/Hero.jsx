@@ -5,7 +5,7 @@ import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
-// import CV from '../../assets/cv.pdf';
+import CV from '../../assets/CV.pdf';
 import { useTheme } from '../../common/ThemeContext';
 import { useHackerEffect } from '../../common/UseHackerEffect';
 
@@ -40,7 +40,7 @@ function Hero() {
                     I'm looking to kickstart my career in software and collaborate closely with an experienced team to develop high quality, maintainable software.
                 </p>
                 <span>
-                    <a href="{CV}" download>
+                    <a href={CV} download>
                         <button className="hover">
                             My Resume
                         </button>
