@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    img {
+        max-width: 502px;
+        align-self: center;
+        background-color: var(--project-card-bg);
+    }
+
+    a {
+        width: fit-content;
+        text-decoration: none;
+        color: #222;
+        transition: transform 200ms ease-in-out;
+    }
+
+    a:hover {
+        transform: scale(1.05);
+    }
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.project {
+    border: 2px solid var(--text-color);
+    max-width: 500px;
+    min-height: 550px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.projectInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    padding-left: 20px;
+
+    h3 {
+        margin-top: 10px;
+    }
+
+    p {
+        max-width: 50ch;
+        text-align: left;
+    }
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.skillTag {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+
+    p {
+        color: var(--intro-text-color);
+        font-size: 18px;
+        font-weight: 500;
+        border-bottom: 2px solid transparent;
+    }
+
+    p:hover {
+        border-bottom: 2px solid var(--intro-text-color);
+    }
+
+    a {
+        transition: none;
+    }
+
+    a:hover {
+        transform: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .projectsContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 30px;
+    }
+
+    .project {
+        min-height: 600px;
+        flex-grow: 1;
+        flex-basis: auto;
+    }
+
+    .projectInfo {
+        flex-grow: 1;
+    }
+}

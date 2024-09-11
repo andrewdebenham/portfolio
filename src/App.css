@@ -1,0 +1,136 @@
+:root {
+  --background-gradient: linear-gradient(-40deg, #ffffff 10%, #C2E8EB 28%, #D8F1F4 39%, #A1D8DC 50%, #ffffff 64%, #C2E8EB 77%, #D8F1F4 90%, #A1D8DC 100%);
+  --background-color: #fff;
+  --btn-color: #0987f2;
+  --btn-text-color: #fff;
+  --project-card-bg: #ffffff00;
+  --text-color: #222;
+  --form-text-color: #555;
+  --footer-text-color: #888;
+  --intro-text-color: #222;
+  --title-text-color: #0987f2;
+  --toggle-position: 0;
+  --toggle-background: #cecdcd;
+  --toggle-before-background: linear-gradient(to bottom, #444, #222);
+  --toggle-box-shadow: inset 0 2px 15px rgba(0, 0, 0, 0.1),
+                        inset 0 2px 2px rgba(0, 0, 0, 0.1),
+                        inset 0 -2px 2px rgba(0, 0, 0, 0.1);
+  --toggle-before-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5),
+                              inset 2px 2px rgba(255, 255, 255, 0.2),
+                              inset -2px 2px rgba(255, 255, 255, 0.2);
+  --skill-background-color: rgba(0, 0, 0, 0.5);
+  --react-icon-color: rgb(0, 183, 255);
+  --express-icon-color: #222;
+  --node-icon-color: rgb(17, 236, 17);
+}
+
+[data-theme='dark'] {
+  --background-gradient: linear-gradient(-40deg, #000000 10%, #001B24 28%, #000F14 39%, #002633 50%, #000000 64%, #001B24 77%, #000F14 90%, #002633 100%);
+  --background-color: #222;
+  --btn-color: rgba(18, 247, 201, 0.1);
+  --btn-text-color: #12f7c9;
+  --project-card-bg: #fff;
+  --text-color: #fff;
+  --form-text-color: #fff;
+  --footer-text-color: #bbb;
+  --intro-text-color: #f55af2;
+  --title-text-color: #12f7c9;
+  --toggle-position: 25px;
+  --toggle-background: #cecdcd;
+  --toggle-before-background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  --toggle-box-shadow: inset 0 2px 15px rgba(0, 0, 0, 0.1),
+                        inset 2px 2px rgba(0, 0, 0, 0.1),
+                        inset -2px 2px rgba(0, 0, 0, 0.05);
+  --toggle-before-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5),
+                              inset 2px 2px rgba(255, 255, 255, 1),
+                              inset -2px 2px rgba(255, 255, 255, 1);
+  --skill-background-color: rgba(255, 255, 255, 0.1);
+  --react-icon-color: cyan;
+  --express-icon-color: #fff;
+  --node-icon-color: lightgreen;
+}
+
+body {
+  background: var(--background-gradient);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 60px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+h1, h2, h3, p {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, p {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  font-size: 20px;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 350;
+}
+
+.sectionTitle {
+  margin-bottom: 30px;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+@media (width >= 800px) {
+  #root {
+    gap: 100px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2, h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 60px;
+  }
+}
+
+@media (width >= 1400px) {
+  #root {
+    gap: 200px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 75px;
+  }
+}
