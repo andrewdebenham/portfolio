@@ -125,3 +125,13 @@
         flex-grow: 1;
     }
 }
+
+@media (max-width: 550px) {
+    .project {
+        max-width: 350px;
+
+        img {
+            height: 250px;
+        }
+    }
+}

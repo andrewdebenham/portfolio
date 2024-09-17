@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import styles from './SkillsStyles.module.css';
 import python from '../../assets/python.svg';
+import GameState from '../Snake/GameState';
+import Modal from '../Snake/Modal';
 
 import { RiJavascriptFill } from 'react-icons/ri';
 import { FaHtml5 } from 'react-icons/fa';
@@ -12,6 +15,15 @@ import { BiLogoPostgresql } from 'react-icons/bi';
 import { SiMongodb } from 'react-icons/si';
 
 function Skills() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
 
   return (
     <section id="skills" className={styles.container}>
@@ -58,6 +70,10 @@ function Skills() {
             <span className={styles.tooltip}>MongoDB</span>
           </div>
         </div>
+        {/* <button onClick={openModal} className={styles.openModal}>Open Modal</button>
+        <Modal isOpen={isModalOpen} onClose={closeModal} >
+          <GameState />
+        </Modal> */}
     </section>
   )
 }
